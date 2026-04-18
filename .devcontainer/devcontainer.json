@@ -1,6 +1,6 @@
 {
   "name": "Housefind (Playwright)",
-  "image": "mcr.microsoft.com/playwright/python:v1.44.0-jammy",
+  "image": "mcr.microsoft.com/playwright/python:v1.58.0-jammy",
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
