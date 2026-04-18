@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+output/
+*.csv
+*.json
+!package.json
+.playwright/
+.DS_Store
