@@ -176,7 +176,10 @@ async def scrape(city: str, bhk: list[str] | None, prop_type: str | None,
     print(f"[scrape] URL: {url}", file=sys.stderr)
 
     async with async_playwright() as pw:
-        browser: Browser = await pw.chromium.launch(headless=headless)
+        browser: Browser = await pw.chromium.launch(
+            headless=headless,
+            args=["--no-sandbox", "--disable-dev-shm-usage"],
+        )
         ctx = await browser.new_context(user_agent=USER_AGENT, viewport={"width": 1366, "height": 900})
         page = await ctx.new_page()
 

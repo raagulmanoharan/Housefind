@@ -4,8 +4,7 @@ __pycache__/
 venv/
 .env
 output/
-*.csv
-*.json
-!package.json
+output/*.csv
+output/*.json
 .playwright/
 .DS_Store

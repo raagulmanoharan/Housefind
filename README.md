@@ -4,7 +4,25 @@ Playwright-based scraper for NoBroker rental listings. This is a **starter
 scaffold** — NoBroker actively fights scrapers and the DOM changes often, so
 expect to adjust selectors over time.
 
-## Install
+## Run on GitHub Codespaces (recommended — zero local setup)
+
+1. On GitHub, click **Code → Codespaces → Create codespace on this branch**.
+2. Wait ~2 min while the devcontainer builds (it uses the official
+   `mcr.microsoft.com/playwright/python` image, so Chromium and all OS deps are
+   pre-installed; `requirements.txt` is installed automatically).
+3. In the Codespace terminal:
+
+   ```bash
+   python scraper.py --city bangalore --bhk 2 3 --max-rent 80000 -o output/listings.json
+   ```
+
+4. Output appears in `output/`. To download, right-click the file in the VS Code
+   sidebar → **Download**.
+
+Codespaces has unrestricted outbound network, so NoBroker is reachable. Headed
+mode (`--headed`) won't show a window in Codespaces — leave it headless.
+
+## Run locally
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
